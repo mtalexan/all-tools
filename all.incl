@@ -1,0 +1,24 @@
+# The one file that can be included to get everything in this folder
+#
+# This file should be included in the .bashrc at the end of the file.
+#
+# Arguments:
+#  MY_TOOLS_DIR : The path to the directory this repo is in
+
+#arguments to sub-files
+LOCAL_PROFILES_DIR=${MY_TOOLS_DIR}/profile
+LOCAL_REPOS_DIR=${MY_TOOLS_DIR}/repos
+
+#extend the path to include our tools directories
+export PATH=${MY_TOOLS_DIR}/scripts:${MY_TOOLS_DIR}/repos/tools:${PATH}
+
+source ${LOCAL_PROFILES_DIR}/sudo
+source ${LOCAL_PROFILES_DIR}/emacs_window
+source ${LOCAL_PROFILES_DIR}/screen
+source ${LOCAL_PROFILES_DIR}/emacs_daemon
+source ${LOCAL_PROFILES_DIR}/emacs_gtags
+source ${LOCAL_PROFILES_DIR}/repos
+source ${LOCAL_PROFILES_DIR}/altera
+source ${LOCAL_PROFILES_DIR}/generic
+source ${LOCAL_PROFILES_DIR}/git
+source ${LOCAL_PROFILES_DIR}/alias_completion
