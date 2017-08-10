@@ -8,6 +8,7 @@
 #arguments to sub-files
 LOCAL_PROFILES_DIR=${MY_TOOLS_DIR}/profile
 LOCAL_REPOS_DIR=${MY_TOOLS_DIR}/repos
+LOCAL_CONFIG_DIR=${MY_TOOLS_DIR}/config
 
 #extend the path to include our tools directories
 export PATH=${MY_TOOLS_DIR}/scripts:${MY_TOOLS_DIR}/repos/tools:${PATH}
@@ -22,3 +23,6 @@ source ${LOCAL_PROFILES_DIR}/altera
 source ${LOCAL_PROFILES_DIR}/generic
 source ${LOCAL_PROFILES_DIR}/git
 source ${LOCAL_PROFILES_DIR}/alias_completion
+
+source ${LOCAL_PROFILES_DIR}/configs
+
