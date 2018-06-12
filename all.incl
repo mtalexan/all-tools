@@ -21,6 +21,7 @@ source ${LOCAL_PROFILES_DIR}/emacs_gtags
 source ${LOCAL_PROFILES_DIR}/repos
 source ${LOCAL_PROFILES_DIR}/altera
 source ${LOCAL_PROFILES_DIR}/generic
+source ${LOCAL_PROFILES_DIR}/python
 source ${LOCAL_PROFILES_DIR}/git
 source ${LOCAL_PROFILES_DIR}/alias_completion
 
