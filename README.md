@@ -10,4 +10,4 @@ MY_TOOLS_DIR=\<path to cloned repo folder\>
 
 source ${MY_TOOLS_DIR}/all.incl
 
-Also remove the "unset color_prompt force_color_prompt" from your bashrc since it needs to remain set if you want color
+Also remove the "unset color_prompt force_color_prompt" from your bashrc since it needs to remain set if you want color.  If using rxvt-unicode, you'll need to add that to the list of terminals identified as color-capable
