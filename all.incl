@@ -34,20 +34,26 @@ fi
 if [ -n "${EMACS_USE_DAEMON}" ] && ${EMACS_USE_DAEMON} ; then
     source ${LOCAL_PROFILES_DIR}/emacs_daemon.incl
 fi
+
 # must come after possible emacs_daemon
 source ${LOCAL_PROFILES_DIR}/emacs_window.incl
 # must come after emacs_window
 source ${LOCAL_PROFILES_DIR}/screen.incl
 
-# Check to see if gtags is installed in the system
-GTAGS_INSTALL_DIR=$(which gtags)
+# Is the gtags installation folder unspecified?
 if [ -z "${GTAGS_INSTALL_DIR}" ] ; then
-    # drop the file name and the bin directory name
-    GTAGS_INSTALL_DIR=$(dirname $(dirname ${GTAGS_INSTALL_DIR}))
-
+    # is gtags installed on the system?
+    GTAGS_INSTALL_DIR=$(which gtags)
+    if [ -n "${GTAGS_INSTALL_DIR}" ] ; then
+        # drop the file name and the bin directory name
+        export GTAGS_INSTALL_DIR=$(dirname $(dirname ${GTAGS_INSTALL_DIR}))
+    else
+        unset GTAGS_INSTALL_DIR
+    fi
+fi
+# do we have a version of gtags we can use?
+if [ -n "${GTAGS_INSTALL_DIR}" ] ; then
     source ${LOCAL_PROFILES_DIR}/emacs_gtags.incl
-else
-    unset GTAGS_INSTALL_DIR
 fi
 
 source ${LOCAL_PROFILES_DIR}/repos.incl
@@ -62,7 +68,6 @@ fi
 
 source ${LOCAL_PROFILES_DIR}/python.incl
 source ${LOCAL_PROFILES_DIR}/git.incl
-
 
 if [ -n "$BASH" ] ; then
   source ${LOCAL_PROFILES_DIR}/alias_completion.bash

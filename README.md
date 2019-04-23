@@ -7,7 +7,8 @@ To use, clone it, enter and run a recursive submodule update, then put the
 following two lines (at a minimum) at the end of your .bashrc or .zshrc:
 
 ```
-# optional if you've installed gtags
+# optional if you've installed gtags somewhere strange.
+# leave off if it's installed in the PATH somewhere
 export GTAGS_INSTALL_DIR=\<path to gtags install folder that contains a bin subfolder\>
 
 # optional if you want self-written emacs daemon support
