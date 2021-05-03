@@ -1,19 +1,19 @@
 [submodule "repos"]
 	path = repos
-	url = https://github.com/mtalexan/modular-scripts.git
+	url = git@github.com:mtalexan/modular-scripts.git
 	branch = master
 [submodule "gdb_scripts"]
 	path = gdb_scripts
-	url = https://github.com/mtalexan/modular-gdb-scripts.git
+	url = git@github.com:mtalexan/modular-gdb-scripts.git
 	branch = master
 [submodule "profile"]
 	path = profile
-	url = https://github.com/mtalexan/bash-profile.git
+	url = git@github.com:mtalexan/bash-profile.git
 	branch = master
 [submodule "scripts"]
 	path = scripts
-	url = https://github.com/mtalexan/bash-scripts.git
+	url = git@github.com:mtalexan/bash-scripts.git
 	branch = master
 [submodule "config"]
 	path = config
-	url = https://github.com/mtalexan/config.git
+	url = git@github.com:mtalexan/config.git
